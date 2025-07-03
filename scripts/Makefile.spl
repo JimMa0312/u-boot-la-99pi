@@ -138,9 +138,9 @@ endif
 
 ifdef CONFIG_LOONGSON_DDR4
 ifneq ($(CONFIG_GCC_VERSION), $(firstword $(shell echo "130000 $(CONFIG_GCC_VERSION)" | tr ' ' '\n' | sort -n)))
-PLATFORM_LIBS += ../drivers/ram/loongson/libmem_config_new_abi.a
+PLATFORM_LIBS += $(srctree)/drivers/ram/loongson/libmem_config_new_abi.a
 else
-PLATFORM_LIBS += ../drivers/ram/loongson/libmem_config.a
+PLATFORM_LIBS += $(srctree)/drivers/ram/loongson/libmem_config.a
 endif
 endif
 
